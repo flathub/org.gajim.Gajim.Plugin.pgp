@@ -1,7 +1,7 @@
 id: org.gajim.Gajim.Plugin.pgp
 runtime: org.gajim.Gajim
 runtime-version: stable
-sdk: org.gnome.Sdk//3.32
+sdk: org.gnome.Sdk//3.34
 build-extension: true
 separate-locales: false
 appstream-compose: false
@@ -36,4 +36,4 @@ modules:
         sha256: 8e5935bd6ca5eb9409d96cdf518cad50597655b051fe09180c54db8c4828620c
       - type: file
         path: org.gajim.Gajim.Plugin.pgp.metainfo.xml
-        sha256: cda6e41cdff3f7ff98136721a522305046714343236f9eb54b3e4cba5ccb34ad
+        sha256: fa574af0b79ae62599d6d7c9c4016742de3b1b4b10890f66b096b7581dfe593d
