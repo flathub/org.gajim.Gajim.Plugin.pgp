@@ -5,15 +5,20 @@ sdk: org.gnome.Sdk//3.38
 build-extension: true
 separate-locales: false
 appstream-compose: false
-finish-args:
-  - --filesystem=~/.gnupg
 
 build-options:
   env:
     PIP_TARGET: /app/plugins/pgp/site-packages
 
 modules:
-  - modules/python3-python-gnupg.yaml
+  - name: python3-python-gnupg
+    buildsystem: simple
+    build-commands:
+      - pip3 install python_gnupg-0.4.6-py2.py3-none-any.whl
+    sources:
+      - type: file
+        url: https://files.pythonhosted.org/packages/cb/85/8a1588a04172e0853352ecfe214264c65a62ab35374d9ad9c569cf94c2a3/python_gnupg-0.4.6-py2.py3-none-any.whl
+        sha256: cba3566e8a8fb7bb417d6897a6e17bfc7f9371052e57eb0057783c07d762a679
 
   - name: gajim-pgp
     buildsystem: simple
@@ -24,5 +29,5 @@ modules:
       - appstream-compose --basename=org.gajim.Gajim.Plugin.pgp --prefix=${FLATPAK_DEST} --origin=flatpak org.gajim.Gajim.Plugin.pgp
     sources:
       - type: archive
-        url: https://ftp.gajim.org/plugins_releases/pgp_1.2.46.zip
-        sha256: 7cf6593ffb75b761c120c1fd262c257b61b52302fa956ae3bec005a81a4075e4
+        url: https://ftp.gajim.org/plugins_releases/pgp_1.3.5.zip
+        sha256: 76d9054e759d9b275d2314c7ec19e70f4f1e12531812f31a4ac279ff55f0bc9b
