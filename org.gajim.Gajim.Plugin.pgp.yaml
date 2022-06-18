@@ -14,11 +14,11 @@ modules:
   - name: python3-python-gnupg
     buildsystem: simple
     build-commands:
-      - pip3 install python_gnupg-0.4.8-py2.py3-none-any.whl
+      - pip3 install python_gnupg-0.4.9-py2.py3-none-any.whl
     sources:
       - type: file
-        url: https://files.pythonhosted.org/packages/py2.py3/p/python_gnupg/python_gnupg-0.4.8-py2.py3-none-any.whl
-        sha256: 93a521501d6c2785d96b190aec7125ba89c1c2fe708b0c98af3fb32b59026ab8
+        url: https://files.pythonhosted.org/packages/py2.py3/p/python_gnupg/python_gnupg-0.4.9-py2.py3-none-any.whl
+        sha256: 012960bde4d25dad631bb7650f563dda5e7271248a73f3584240063a293d99d8
 
   - name: gajim-pgp
     buildsystem: simple
@@ -30,5 +30,5 @@ modules:
     sources:
       - type: archive
         strip-components: 0
-        url: https://ftp.gajim.org/plugins/master/pgp/pgp_1.4.5.zip
-        sha256: 8f492406c1f49dc2cc22bfffa4aeb165b3079c4c8dbd90b6dcc3619256e94e59
+        url: https://ftp.gajim.org/plugins/master/pgp/pgp_1.4.6.zip
+        sha256: 4663966a80049bbd9a52d878ceeb92c54de8076201cb90115546bc088daa49fa
