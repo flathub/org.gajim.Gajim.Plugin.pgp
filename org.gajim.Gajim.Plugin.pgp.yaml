@@ -31,5 +31,5 @@ modules:
     sources:
       - type: archive
         strip-components: 0
-        url: https://ftp.gajim.org/plugins/master/pgp/pgp_1.5.2.zip
-        sha256: 0effbf7ae650114c8decc02a8668d7438a78cd428120e2e84069cff1a45a0ac6
+        url: https://ftp.gajim.org/plugins/master/pgp/pgp_1.6.0.zip
+        sha256: 384d00d922d467fc18a6d163a0ff5556960b141c2811cf9f85cf8059fcb5eff6
