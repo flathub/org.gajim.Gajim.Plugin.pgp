@@ -1,7 +1,7 @@
 id: org.gajim.Gajim.Plugin.pgp
 runtime: org.gajim.Gajim
 runtime-version: stable
-sdk: org.gnome.Sdk//46
+sdk: org.gnome.Sdk//47
 build-extension: true
 separate-locales: false
 appstream-compose: false
@@ -27,7 +27,8 @@ modules:
       - 'cp -R -t ${FLATPAK_DEST} *'
     post-install:
       - install -Dm644 --target-directory=${FLATPAK_DEST}/share/metainfo org.gajim.Gajim.Plugin.pgp.metainfo.xml
-      - appstream-compose --basename=org.gajim.Gajim.Plugin.pgp --prefix=${FLATPAK_DEST} --origin=flatpak org.gajim.Gajim.Plugin.pgp
+      - appstreamcli compose --components=${FLATPAK_ID} --prefix=/ --origin=${FLATPAK_ID}
+        --result-root=${FLATPAK_DEST} --data-dir=${FLATPAK_DEST}/share/app-info/xmls ${FLATPAK_DEST}
     sources:
       - type: archive
         strip-components: 0
